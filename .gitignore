@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Output directories
+__pycache__/
+dist/
+build/
+*.egg-info/
+
+# Environment variables file
+.env
+
+# Local development configuration
+instance/
+
+# IDE-specific files
+.idea/
+
+# Byte-compiled files (PyInstaller, PyOxidizer, etc.)
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest cache
+pytest_cache/
+
+
+# If you have a Flask app in a subdirectory, you might need to include
+# additional patterns to ignore specific files or directories.
+#CSV folder
+csv  
+.idea
