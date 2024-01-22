@@ -15,7 +15,7 @@ df_Stock = Stock.rename(columns={"Close(t)": "Close"})
 df_Stock = df_Stock.drop(columns="Date_col")
 
 
-# Assuming 'create_train_test_set' is defined elsewhere in your code
+
 def create_train_test_set(df_Stock):
     features = df_Stock.drop(columns=["Close_forcast"], axis=1)
     target = df_Stock["Close_forcast"]

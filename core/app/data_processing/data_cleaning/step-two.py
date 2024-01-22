@@ -7,6 +7,7 @@ from sklearn import metrics
 
 # Load your stock data
 Stock = pd.read_csv(r"F:\ijse final\ai-module-backend\core\csv\AMZN.csv", index_col=0)
+# Stock = pd.read_csv(r"F:\ijse final\ai-module-backend\core\csv\TSLA.csv", index_col=0)
 
 # Rename the column
 df_Stock = Stock.rename(columns={"Close(t)": "Close"})
@@ -59,7 +60,7 @@ lr = LinearRegression()
 lr.fit(X_train, Y_train)
 
 # Future date for prediction
-future_date = "2070-02-21"
+future_date = "2035-09-21"
 future_date = pd.to_datetime(future_date, format="%Y-%m-%d")
 
 # Prepare features for the future date
