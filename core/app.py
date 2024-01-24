@@ -1,4 +1,5 @@
-from app.data_processing.data_cleaning.step_four import test_function
+from app.data_processing.data_cleaning.data_cleaning_service import get_prediction
+from fastapi import FastAPI, Query
 from flask import Flask
 
 app = Flask(__name__)
@@ -6,11 +7,11 @@ app = Flask(__name__)
 print("print ok")
 
 
-@app.route("/amzn", methods=["GET"])
+@app.route("/get-prediction", methods=["GET"])
 def firstRoute():
     # print("aa")
     # return "a"
-    return test_function()
+    return get_prediction("TSLA", "2025-08-13")
 
 
 # app.register_blueprint("/l")
