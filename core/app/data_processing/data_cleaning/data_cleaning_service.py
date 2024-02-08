@@ -58,4 +58,4 @@ def get_prediction(name, date):
     plt.savefig(plot_path)
     plt.close()
 
-    return "F:/ijse final/ai-module-backend/core/prediction_plot.png"
+    return future_price
