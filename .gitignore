@@ -49,5 +49,5 @@ pytest_cache/
 # If you have a Flask app in a subdirectory, you might need to include
 # additional patterns to ignore specific files or directories.
 #CSV folder
-csv  
+
 .idea
