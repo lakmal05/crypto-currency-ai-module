@@ -9,8 +9,6 @@ from sklearn.linear_model import LinearRegression
 
 
 def get_prediction(name, date):
-    print("======")
-    print(name)
     future_date = date
     Stock = pd.read_csv(
         rf"F:\ijse final\ai-module-backend\core\csv\{name}.csv", index_col=0
@@ -27,8 +25,8 @@ def get_prediction(name, date):
     future_features = X_train.iloc[0].copy()
     future_features = future_features.values.reshape(1, -1)
     future_price_beta = lr.predict(future_features)[0]
-    max_value = 1000 
-    future_price_meta = np.random.uniform(-50, 50)  
+    max_value = 1000
+    future_price_meta = np.random.uniform(-50, 50)
     future_price_beta += future_price_meta
     future_price_beta = min(future_price_beta, max_value)
     future_price = future_price_beta
@@ -55,8 +53,9 @@ def get_prediction(name, date):
     plt.ylabel("Price")
     plt.legend()
     plt.grid(which="major", color="k", linestyle="-.", linewidth=0.5)
-    plt.show()
+    # plt.show()
+    plot_path = "prediction_plot.png"
+    plt.savefig(plot_path)
+    plt.close()
 
-    # Your data cleaning code goes here
-    print("Data cleaning function executed.")
-    return "ok"
+    return "F:/ijse final/ai-module-backend/core/prediction_plot.png"
